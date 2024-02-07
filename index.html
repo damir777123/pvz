@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute; 
+			
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			transition: 1s;
+		}
+		.panel {
+			background: red;
+			height: 300px;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		<div class="panel">
+<h1>Очки:<span class="point">0</span></h1>
+		
+		<h5 style="position: absolute; left: 600px; top: 50px" class="score"></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px; left:700px ; ">		
+		<img class="shooter" src="peashooter.png"  style="top: 350px; left: 700px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px; left: 700px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px; left: 700px;">
+		<img class="shooter" src="peashooter.png"  style="top: 650px; left:700px;">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px; left: 1500px;">
+		<img class="zombies" src="zombie2.png" style="top: 320px; left: 1500px;">
+		<img class="zombies" src="zombie2.png" style="top: 420px; left: 1500px;">
+		<img class="zombies" src="zombie4.png" style="top: 520px; left: 1500px;">
+		<img class="zombies" src="zombie4.png" style="top: 620px; left: 1500px;">
+	</div>
+<script>
+
+
+	let score = 0;
+	let mybox = document.querySelectorAll(".zombies");
+	let mebox = document.querySelectorAll(".shooter");
+	
+    let left1 = 1500;
+      let left2 = 1500;
+        let left3 = 1500;
+          let left4 = 1500;
+            let left5 = 1500;
+
+
+    mybox[0].onclick = function() {
+        left1 = left1 - 100;
+        console.log(left1)
+        mybox[0].style.left = left1 + "px"
+
+
+        if(left1==700)  {
+        alert("горох rip")
+         mebox[0].style.display = "none"
+
+         score = score + 1;
+         document.querySelector(".point").innerHTML = score;
+        
+
+        }
+   }
+
+    mybox[1].onclick = function() {
+        left2 = left2 - 100;
+        console.log(left2)
+        mybox[1].style.left = left2 + "px"
+
+
+        if(left2==700)  {
+        alert("горох rip")
+         mebox[1].style.display = "none"
+
+         score = score + 1;
+         document.querySelector(".point").innerHTML = score;
+        }
+   }
+
+    mybox[2].onclick = function() {
+        left3 = left3 - 100;
+        console.log(left3)
+        mybox[2].style.left = left3 + "px"
+
+
+        if(left3==700)  {
+        alert("горох rip")
+         mebox[2].style.display = "none"
+
+         score = score + 1;
+         document.querySelector(".point").innerHTML = score;
+        }
+   }
+
+    mybox[3].onclick = function() {
+        left4 = left4 - 100;
+        console.log(left4)
+        mybox[3].style.left = left4 + "px"
+
+
+        if(left4==700)  {
+        alert("горох rip")
+         mebox[3].style.display = "none"
+
+         score = score + 1;
+         document.querySelector(".point").innerHTML = score;
+        }
+   }
+
+    mybox[4].onclick = function() {
+        left5 = left5 - 100;
+        console.log(left5)
+        mybox[4].style.left = left5 + "px"
+
+
+        if(left5==700)  {
+        alert("горох rip")
+
+      
+   mebox[4].style.display = "none"
+
+   score = score + 1;
+   document.querySelector(".point").innerHTML = score;
+        }
+
+   }
+
+
+
+
+</script>
+</body>
+</html>
